@@ -1,0 +1,52 @@
+{
+  "name": "zorm",
+  "displayName": "zorm",
+  "description": "Language support for Zig ORM zorm",
+  "version": "0.0.1",
+  "main": "./client/out/client.js",
+  "icon": "public/icon.png",
+  "activationEvents": [
+    "onLanguage:zorm"
+  ],
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "zorm",
+        "aliases": [
+          "Zorm",
+          "zorm"
+        ],
+        "extensions": [
+          ".zorm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "zorm",
+        "scopeName": "source.zorm",
+        "path": "./syntaxes/zorm.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -b client server"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.24",
+    "typescript": "^5.0.0",
+    "vscode": "^1.1.37"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.1"
+  }
+}

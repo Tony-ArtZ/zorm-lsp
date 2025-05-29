@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Zorm",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#annotations"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#dbtypes"
+    },
+    {
+      "include": "#fieldtypes"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.zorm",
+          "match": "//.*$"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.zorm",
+          "match": "\\b(backend|model)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.zorm",
+          "match": "\\b(Int|String|Bool|Float|DateTime|ObjectId)\\b\\??"
+        }
+      ]
+    },
+    "annotations": {
+      "patterns": [
+        {
+          "name": "meta.annotation.zorm",
+          "match": "@\\w+"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.zorm",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.zorm",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "dbtypes": {
+      "patterns": [
+        {
+          "name": "constant.language.dbtype.zorm",
+          "match": "\\b(postgres|sqlite|mongo)\\b"
+        }
+      ]
+    },
+    "fieldtypes": {
+      "patterns": [
+        {
+          "name": "support.type.fieldtype.zorm",
+          "match": "\\b(int|float|string|bool|datetime|relation|objectid)\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.zorm"
+}
