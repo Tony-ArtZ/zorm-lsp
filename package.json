@@ -8,6 +8,10 @@
   "activationEvents": [
     "onLanguage:zorm"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tony-ArtZ/zorm-lsp"
+  },
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -22,6 +26,10 @@
           "Zorm",
           "zorm"
         ],
+        "icon": {
+          "light": "public/icon.png",
+          "dark": "public/icon.png"
+        },
         "extensions": [
           ".zorm"
         ],
